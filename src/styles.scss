@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.form {
+  &-btn {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  &-input {
+    input,
+    label {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

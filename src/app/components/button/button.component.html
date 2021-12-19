@@ -1,0 +1,6 @@
+<button 
+    class="app-button {{ class }}" 
+    [ngStyle]="{ 'background-color': color }" 
+    (click)="onClickButton($event)"
+    [disabled]="disabled"
+>{{ text }}</button>

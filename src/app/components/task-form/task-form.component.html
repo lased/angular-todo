@@ -1,0 +1,20 @@
+<form class="form" [formGroup]="taskForm" (submit)="submitHandler()">
+    <app-input 
+        class="form-input"
+        label="Задача" 
+        placeholder="Добавить задачу" 
+        [control]="getFormControl('text')"
+    ></app-input>
+    <app-input 
+        type="datetime-local"
+        class="form-input"
+        label="День и время" 
+        placeholder="Добавить день и время" 
+        [control]="getFormControl('date')"
+    ></app-input>
+    <div class="form-checkbox">
+        <label>Установить напоминание</label>
+        <input type="checkbox" [checked]="taskForm.controls['reminder'].value" (change)="toggleReminder()">
+    </div>
+    <app-button class="form-btn" color="black" text="Сохранить задачу" [disabled]="!taskForm.valid"></app-button>
+</form>

@@ -1,0 +1,9 @@
+<div class="task" [ngClass]="{ reminder: task.reminder }" (dblclick)="toggleReminderHandler(task)">
+    <div class="text">
+        {{ task.text }}
+        <fa-icon class="icon" [icon]="faTimes" (click)="removeTaskHandler(task)"></fa-icon>
+    </div>
+    <div class="date">
+        {{ task.date | date:'d-M-yyyy h:mm' }}
+    </div>
+</div>

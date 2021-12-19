@@ -1,0 +1,9 @@
+<div class="error" *ngIf="control.invalid && control.touched">
+  <strong *ngFor="let error of control.errors | keyvalue">
+    {{ getErrorMessage(error) }}
+  </strong>
+</div>
+<div [class]="'input ' + class">
+    <label>{{ label }}</label>
+    <input [type]="type" [placeholder]="placeholder" [formControl]="control">
+</div>

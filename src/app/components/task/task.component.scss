@@ -1,0 +1,21 @@
+.task {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #ccc;
+  user-select: none;
+
+  .text {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon {
+    cursor: pointer;
+    color: red;
+  }
+
+  &.reminder {
+    border-left: 3px solid green;
+  }
+}

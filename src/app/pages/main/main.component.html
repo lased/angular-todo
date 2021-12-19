@@ -1,0 +1,9 @@
+<div class="container">
+    <app-header [title]="title" [toggleButton]="toggleButton" (onToggleButton)="toggleButtonHandler($event)"></app-header>
+    <app-task-form *ngIf="toggleButton" (onCreateTask)="createTaskHandler($event)"></app-task-form>
+    <app-tasks 
+        [tasks]="tasks" 
+        (onRemoveTask)="removeTaskHandler($event)"
+        (onToggleReminder)="toggleReminderHandler($event)"
+    ></app-tasks>
+</div>

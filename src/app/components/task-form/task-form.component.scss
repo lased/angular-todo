@@ -1,0 +1,16 @@
+.form {
+  &-checkbox {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: row-reverse;
+
+    label {
+      margin-left: 10px;
+      font-weight: bold;
+      line-height: 2;
+    }
+  }
+}
